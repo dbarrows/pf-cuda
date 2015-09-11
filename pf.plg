@@ -1,0 +1,9 @@
+set xlabel "Time (weeks)"
+set ylabel "Number of cases"
+plot 	filename u 1:2 t 'True' with lines, \
+		filename u 1:3 t 'Noisy data' with lines, \
+		filename u 1:4 t 'Estimation' with linespoints
+set term postscript
+set output "plot.ps"
+replot
+pause -1
